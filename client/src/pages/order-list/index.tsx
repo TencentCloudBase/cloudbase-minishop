@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { View, Button } from "@tarojs/components";
+import { app } from "../../common";
 import "./index.scss";
 
 export interface IOrder {
@@ -24,7 +25,14 @@ export default class Order extends Component {
     this.loadData();
   }
 
-  async loadData() {}
+  async loadData() {
+    const coll = app.db.collection("order");
+    coll.get().then(res => {
+      this.setState({
+        orderList: res.data
+      });
+    });
+  }
 
   async closeOrder() {}
 
