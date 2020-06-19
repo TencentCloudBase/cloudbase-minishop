@@ -1,0 +1,34 @@
+.index {
+  padding: 10px;
+}
+
+.good-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.good-image {
+  width: 100px;
+  height: 100px;
+}
+
+.good-detail {
+  flex: 1 1 auto;
+  margin: 10px 0;
+  font-size: 14px;
+  margin-left: 15px;
+
+  .title {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .price {
+    margin-top: 10px;
+  }
+}
+
+.button {
+  margin-top: 10px;
+}
